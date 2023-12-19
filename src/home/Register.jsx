@@ -28,13 +28,17 @@ const Register = () => {
                   type="text"
                   className="reg-inp"
                   name="name"
+                  id="name"
                   placeholder="Username"
+                  autoComplete="off"
                 />
                 <input
                   type="email"
                   className="reg-inp"
                   name="email"
+                  id="email"
                   placeholder="Email"
+                  autoComplete="off"
                 />
                 <input
                   type="number"

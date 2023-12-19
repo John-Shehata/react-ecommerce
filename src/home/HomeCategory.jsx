@@ -18,9 +18,7 @@ const HomeCategory = () => {
               <div className="cate-icon">
                 <i className={card.iconName}></i>
               </div>
-              <Link to="/shop">
                 <h6>{card.title}</h6>
-              </Link>
             </div>
           </div>
         </Link>

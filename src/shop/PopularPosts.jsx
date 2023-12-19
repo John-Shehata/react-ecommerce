@@ -23,7 +23,7 @@ const PopularPosts = () => {
   });
 
   return (
-    <div className="widget widget-post mt-3">
+    <div className="widget widget-post">
       <div className="widget-header">
         <h5 className="title">Most Popular Posts</h5>
       </div>

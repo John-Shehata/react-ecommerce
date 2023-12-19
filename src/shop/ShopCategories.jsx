@@ -1,16 +1,14 @@
 import React from "react";
 
-const ShopCategories = ({
-  categories,
-  selectedCategory,
-  filterCategory,
-}) => {
+const ShopCategories = ({ categories, selectedCategory, filterCategory }) => {
   // Map of alll categories and render it
   const renderCategories = categories.map((category, idx) => {
     return (
       <button
         key={idx}
-        className={`ms-2 mt-2 ${selectedCategory == category ? "bg-warning" : ""}`}
+        className={`ms-2 mt-2 ${
+          selectedCategory == category ? "bg-warning" : ""
+        }`}
         onClick={() => filterCategory(category)}
       >
         {category}
@@ -19,7 +17,7 @@ const ShopCategories = ({
   });
 
   return (
-    <>
+    <div className="mb-3">
       <div className="widget-header">
         <h5 className="ms-2">All Categories</h5>
       </div>
@@ -32,7 +30,7 @@ const ShopCategories = ({
         </button>
         {renderCategories}
       </div>
-    </>
+    </div>
   );
 };
 

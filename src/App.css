@@ -43,3 +43,16 @@ h2 span {
 .product-search {
   height: 120px;
 }
+.rating i {
+  color: #c7d807;
+}
+.cart-plus-minus {
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+}
+.rating {
+  height: 45px; 
+  display: flex;
+  align-items: center;
+}
