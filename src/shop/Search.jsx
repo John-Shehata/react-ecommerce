@@ -11,7 +11,11 @@ const Search = ({ products, gridOrList }) => {
   const renderFilteredProducts = filterProducts.map((product) => {
     if (filterProducts && searchTerm && searchTerm != " ") {
       return (
-        <Link key={product.id} to={`/shop/${product.id}`} className="product-search">
+        <Link
+          key={product.id}
+          to={`/shop/${product.id}`}
+          className="product-search"
+        >
           <div className="d-flex gap-3 p-2">
             <div>
               <div className="pro-thumb h-25">
@@ -23,9 +27,7 @@ const Search = ({ products, gridOrList }) => {
               </div>
             </div>
             <div className="product-content">
-              <p>
-                <Link to={`/shop/${product.id}`}>{product.name}</Link>
-              </p>
+              <p>{product.name}</p>
               <h6 className="m-0">${product.price}</h6>
             </div>
           </div>
@@ -38,6 +40,7 @@ const Search = ({ products, gridOrList }) => {
   const searchHandler = (e) => {
     setSearchTerm(e.target.value);
   };
+
   return (
     <div className="widget widget-search">
       <form className="search-wrapper mb-3">

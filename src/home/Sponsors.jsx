@@ -31,7 +31,7 @@ const Sponsors = () => {
             <Swiper
               slidesPerView={1}
               spaceBetween={10}
-              Autoplay={{
+              autoplay={{
                 delay: 2000,
                 disableOnInteraction: false,
               }}
