@@ -1,6 +1,6 @@
 import React from "react";
 import CountUp from "react-countup";
-import { aboutUsData } from "./homeData";
+import { aboutUsData } from "../utilis/homeData";
 import { Link } from "react-router-dom";
 
 const subTitle = "";

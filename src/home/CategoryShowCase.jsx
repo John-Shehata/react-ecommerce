@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { categoryShowCaseData } from "./homeData";
+import { categoryShowCaseData } from "../utilis/homeData";
 import Rating from "../components/Rating";
 import { Link } from "react-router-dom";
 

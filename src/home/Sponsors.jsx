@@ -1,5 +1,5 @@
 import React from "react";
-import { sponsorsData } from "./homeData";
+import { sponsorsData } from "../utilis/homeData";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles

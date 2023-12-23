@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { reviewsData } from "../shopData";
+import { reviewsData } from "../../utilis/shopData";
 
 import Description from "./Description";
 import Reviews from "./Reviews";

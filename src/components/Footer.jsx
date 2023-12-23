@@ -5,7 +5,7 @@ import {
   ItemList,
   quickList,
   tweetList,
-} from "./footerData";
+} from "../utilis/footerData";
 
 const Footer = () => {
   // Mapping of all Address and render it

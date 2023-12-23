@@ -1,5 +1,5 @@
 import React from "react";
-import { homeCategoryData} from "./homeData";
+import { homeCategoryData} from "../utilis/homeData";
 import { Link } from "react-router-dom";
 
 const HomeCategory = () => {
