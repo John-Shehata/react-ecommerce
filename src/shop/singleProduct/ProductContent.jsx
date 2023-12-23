@@ -7,19 +7,7 @@ const ProductDispaly = ({ item }) => {
   const [preQuantity, setPreQuantity] = useState(1);
   const [discount, setDiscount] = useState("");
 
-  const {
-    id,
-    category,
-    name,
-    seller,
-    price,
-    stock,
-    ratings,
-    ratingsCount,
-    shipping,
-    quantity,
-    img,
-  } = item;
+  const { id, name, seller, price, ratings, ratingsCount, img } = item;
 
   // Render number of stars
 
@@ -130,8 +118,12 @@ const ProductDispaly = ({ item }) => {
 
             {/* Color */}
             <div className="col-6 select-product color">
-              <select value={color} onChange={changeColorHandler} id="color"
-                name="color">
+              <select
+                value={color}
+                onChange={changeColorHandler}
+                id="color"
+                name="color"
+              >
                 <option>Select Color</option>
                 <option>Black</option>
                 <option>Red</option>

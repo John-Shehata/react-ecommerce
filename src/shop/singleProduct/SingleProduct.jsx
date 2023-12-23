@@ -6,8 +6,8 @@ import PageHeader from "../../components/PageHeader";
 import PopularPosts from "../PopularPosts";
 import Tags from "../Tags";
 
-import ProductContent from "../ProductContent";
-import ProductImage from "../ProductImage";
+import ProductContent from "./ProductContent";
+import ProductImage from "./ProductImage";
 import ReviewsAndDescription from "./ReviewsAndDescription";
 
 const SingleProduct = () => {
