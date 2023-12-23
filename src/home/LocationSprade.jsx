@@ -1,5 +1,5 @@
 import React from "react";
-import { locationSpradeData } from "./homeData.js";
+import { locationSpradeData } from "../utilis/homeData.js";
 import { Link } from "react-router-dom";
 
 const LocationSprade = () => {

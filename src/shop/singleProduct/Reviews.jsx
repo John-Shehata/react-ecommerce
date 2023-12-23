@@ -1,6 +1,6 @@
 import React from "react";
 import Rating from "../../components/Rating";
-import { reviewsData } from "../shopData";
+import { reviewsData } from "../../utilis/shopData";
 
 const Reviews = () => {
   // Map of all reviews and render it

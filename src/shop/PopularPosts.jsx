@@ -1,5 +1,5 @@
 import React from "react";
-import { popbularPostsData } from "./shopData";
+import { popbularPostsData } from "../utilis/shopData";
 import { Link } from "react-router-dom";
 
 const PopularPosts = () => {

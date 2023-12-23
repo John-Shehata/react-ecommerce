@@ -1,5 +1,5 @@
 import React from "react";
-import { popularTagsData } from "./shopData";
+import { popularTagsData } from "../utilis/shopData";
 
 const Tags = () => {
   // Map of all tags and render it
