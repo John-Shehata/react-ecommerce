@@ -3,8 +3,8 @@ import productsData from "../../products.json";
 import { useParams } from "react-router-dom";
 
 import PageHeader from "../../components/PageHeader";
-import PopularPosts from "../PopularPosts";
-import Tags from "../Tags";
+import PopularPosts from "../../components/PopularPosts";
+import Tags from "../../components/Tags";
 
 import ProductContent from "./ProductContent";
 import ProductImage from "./ProductImage";
