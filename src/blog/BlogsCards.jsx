@@ -1,10 +1,10 @@
 import React from "react";
-import BlogsData from "/src/utilis/blogData";
+import {blogsData} from "/src/utilis/blogData";
 import { Link } from "react-router-dom";
 
-const BlogsContent = () => {
+const BlogsCards = () => {
   // Map of all blogs and render them
-  const renderBlogs = BlogsData.map((blog) => {
+  const renderBlogs = blogsData.map((blog) => {
     return (
       <div key={blog.id} className="col mb-4">
         <div className="post-item">
@@ -70,4 +70,4 @@ const BlogsContent = () => {
   );
 };
 
-export default BlogsContent;
+export default BlogsCards;

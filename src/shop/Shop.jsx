@@ -6,8 +6,8 @@ import ProductCards from "./ProductCards";
 import Pagination from "./Pagination";
 import Search from "./Search";
 import ShopCategories from "./ShopCategories";
-import PopularPosts from "./PopularPosts";
-import Tags from "./Tags";
+import PopularPosts from "../components/PopularPosts";
+import Tags from "../components/Tags";
 
 const Shop = () => {
   const [gridOrList, setGridOrList] = useState(true);

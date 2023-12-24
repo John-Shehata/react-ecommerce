@@ -1,4 +1,4 @@
-const blogsData = [
+export const blogsData = [
     {   id: 1,
         imgUrl: '/src/assets/images/blog/01.jpg',
         imgAlt: 'Blog Thumb',
@@ -171,4 +171,10 @@ const blogsData = [
     },
 ]
 
-export default blogsData
+export const socialList = [ 
+    { link: "#", iconName: "icofont-facebook", className: "facebook", },
+    { link: "#", iconName: "icofont-twitter", className: "twitter", },
+    { link: "#", iconName: "icofont-linkedin", className: "linkedin", },
+    { link: "#", iconName: "icofont-instagram", className: "instagram", },
+    { link: "#", iconName: "icofont-pinterest", className: "pinterest", },
+];
