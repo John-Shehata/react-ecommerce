@@ -14,6 +14,7 @@ import "././assets/css/animate.css";
 import "././assets/css/style.min.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// Pages
 import Home from "./home/Home.jsx";
 import Blog from "./blog/Blog.jsx";
 import Shop from "./shop/Shop.jsx";
@@ -22,6 +23,11 @@ import CartPage from "./shop/cart/CartPage.jsx";
 import SingleBlogPage from "./blog/singleBlog/SingleBlogPage.jsx";
 import About from "./about/About.jsx";
 import Contact from "./contact/Contact.jsx";
+import Login from "./components/Login.jsx";
+
+import PrivateRoute from "./privateRoute/PrivateRoute.jsx";
+
+import AuthProvider from "./contexts/AuthProvider.jsx";
 
 const router = createBrowserRouter([
   {
@@ -42,7 +48,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/cart-page",
-        element: <CartPage />,
+        element: (
+          <PrivateRoute>
+            <CartPage />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/blog",
@@ -62,10 +72,16 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/login",
+    element: <Login />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
