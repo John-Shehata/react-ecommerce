@@ -24,6 +24,7 @@ import SingleBlogPage from "./blog/singleBlog/SingleBlogPage.jsx";
 import About from "./about/About.jsx";
 import Contact from "./contact/Contact.jsx";
 import Login from "./components/Login.jsx";
+import Signup from "./components/Signup.jsx";
 
 import PrivateRoute from "./privateRoute/PrivateRoute.jsx";
 
@@ -75,6 +76,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/sign-up",
+    element: <Signup />,
   },
 ]);
 
