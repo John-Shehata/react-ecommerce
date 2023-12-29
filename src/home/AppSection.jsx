@@ -7,7 +7,7 @@ const AppSection = () => {
       <div className="container">
         {/* Section Header */}
         <div className="section-header text-center">
-          <Link to="/shop" className="lab-btn mb-4">
+          <Link to="/sign-up" className="lab-btn mb-4">
             Sign up for free
           </Link>
           <h2 className="title">Shop Anytime, Anywhere</h2>
