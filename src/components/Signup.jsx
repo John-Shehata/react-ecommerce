@@ -155,20 +155,3 @@ const Signup = () => {
 };
 
 export default Signup;
-
-// // Login function
-// const handleLogin = (e) => {
-//   e.preventDefault();
-
-//   login(email, password)
-//     .then((result) => {
-//       // Signed in
-//       const user = result.user;
-//       alert("Login successfully!");
-//       navigate("/", { replace: true });
-//     })
-//     .catch((error) => {
-//       const errorMessage = error.message;
-//       setErrorNotifaction("Please insert a valid email and password");
-//     });
-// };
