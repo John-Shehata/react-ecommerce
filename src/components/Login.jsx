@@ -1,5 +1,6 @@
-import React, { useContext, useState } from "react";
-import { socialList } from "../utilis/loginData";
+import React, { useContext, useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchSocialMedia } from "../redux/slices/socialMediaSlice";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthProvider";
 
@@ -8,8 +9,15 @@ const Login = () => {
   const { login, signUpWithGmail } = useContext(AuthContext);
   const navigate = useNavigate();
 
+  const socialMedia = useSelector((state) => state.socialMedia);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchSocialMedia());
+  }, []);
+
   // Map of all socials and render them
-  const renderSocials = socialList.map((social, idx) => {
+  const renderSocials = socialMedia.map((social, idx) => {
     return (
       <li key={idx}>
         <a href={social.siteLink} className={social.className}>
@@ -45,7 +53,7 @@ const Login = () => {
         const user = result.user;
         alert("Login successfully!");
         navigate("/", { replace: true });
-        console.log(user)
+        console.log(user);
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -117,7 +125,11 @@ const Login = () => {
               <ul className="lab-ul social-icons justify-content-center">
                 <li>
                   <button className="github fs-5" onClick={handleRegister}>
-                    <img className="google" src="/src/assets/images/google-icon.png" width={80}></img>
+                    <img
+                      className="google"
+                      src="/src/assets/images/google-icon.png"
+                      width={80}
+                    ></img>
                   </button>
                 </li>
                 {renderSocials}

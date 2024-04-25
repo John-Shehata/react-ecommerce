@@ -1,12 +1,19 @@
-import React from "react";
-import { contactData } from "../utilis/contactData";
-
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchContacts } from "../redux/slices/contactsSlice";
 import PageHeader from "../components/PageHeader";
 import GoogleMap from "../components/GoogleMap";
 
 const Contact = () => {
+  const contacts = useSelector((state) => state.contacts);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, []);
+
   // map of all contacts and render them
-  const renderContacts = contactData.map((contact, idx) => {
+  const renderContacts = contacts.map((contact, idx) => {
     return (
       <div key={idx} className="contact-item">
         <div className="contact-thumb">

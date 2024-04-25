@@ -4,7 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import "swiper/css";
 
-// bootstrap css
+// Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
@@ -13,7 +13,13 @@ import "././assets/css/icofont.min.css";
 import "././assets/css/animate.css";
 import "././assets/css/style.min.css";
 
+// Routing
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+// Redux
+import { Provider } from "react-redux";
+import { store } from "./redux/store.js";
+
 // Pages
 import Home from "./home/Home.jsx";
 import Blog from "./blog/Blog.jsx";
@@ -85,8 +91,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AuthProvider>
-      <RouterProvider router={router} />
-    </AuthProvider>
+    <Provider store={store}>
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
+    </Provider>
   </React.StrictMode>
 );

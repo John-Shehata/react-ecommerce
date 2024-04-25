@@ -1,11 +1,18 @@
-import React from "react";
-import { aboutData } from "../utilis/aboutData";
-
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchAbout } from "../redux/slices/aboutSlice";
 import PageHeader from "../components/PageHeader";
 
 const About = () => {
+  const about = useSelector((state) => state.about);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchAbout());
+  }, []);
+
   // Map of all about data and render them
-  const renderAbouts = aboutData.map((about, idx) => {
+  const renderAbouts = about.map((about, idx) => {
     return (
       <li key={idx}>
         <div className="sr-left">

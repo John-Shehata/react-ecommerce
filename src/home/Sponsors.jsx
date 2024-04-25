@@ -1,5 +1,6 @@
-import React from "react";
-import { sponsorsData } from "../utilis/homeData";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchSponsors } from "../redux/slices/sponsorsSlice";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -10,8 +11,15 @@ import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
 
 const Sponsors = () => {
+  const sponsors = useSelector((state) => state.sponsors);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchSponsors());
+  }, []);
+
   // map of sponsors logos and render it
-  const renderSponsorsLogos = sponsorsData.map((logo, idx) => {
+  const renderSponsorsLogos = sponsors.map((logo, idx) => {
     return (
       <SwiperSlide key={idx}>
         <div className="sponsor-item">

@@ -1,11 +1,19 @@
-import React, { useState } from "react";
-import productsData from "../products.json";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts } from "../redux/slices/produtsSlice";
 import SelectedCategory from "../components/SelectedCategory";
 
 const Banner = () => {
   const [searchInput, setSearchInput] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
+
+  const { products } = useSelector((state) => state.products);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, []);
 
   // Funtion to search for products and filter then
   const searchHandler = (e) => {
@@ -14,7 +22,7 @@ const Banner = () => {
     setSearchInput(searchTerm);
 
     // Filter now
-    const filteration = productsData.filter((product) => {
+    const filteration = products.filter((product) => {
       return product.name.toLowerCase().includes(searchTerm.toLowerCase());
     });
     setFilteredProducts(filteration);
@@ -55,6 +63,7 @@ const Banner = () => {
             </button>
           </form>
           <p>We have the largest collection of products</p>
+
           <ul className="lab-ul">{renderFilterdData}</ul>
         </div>
       </div>
@@ -63,4 +72,3 @@ const Banner = () => {
 };
 
 export default Banner;
-//

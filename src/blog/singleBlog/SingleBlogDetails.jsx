@@ -1,18 +1,23 @@
-import React from "react";
-import { socialList } from "../../utilis/blogData";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchSocialMedia } from "../../redux/slices/socialMediaSlice";
+import { fetchSelectedBlog } from "../../redux/slices/blogSlice";
+import { useParams } from "react-router-dom";
 
-const SingleBlogDetails = ({ curBlog }) => {
-  // Map of all meta data and render them
-  const renderMetaData = curBlog.metaList.map((meta, idx) => {
-    return (
-      <li key={idx}>
-        <i className={meta.iconName}>{meta.text}</i>
-      </li>
-    );
-  });
+const SingleBlogDetails = () => {
+  const socialMedia = useSelector((state) => state.socialMedia);
+  const { selectedBlog } = useSelector((state) => state.blogs);
+
+  const { id } = useParams();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchSocialMedia());
+    dispatch(fetchSelectedBlog(id));
+  }, []);
 
   // Map of all social icons and render them
-  const renderSocials = socialList.map((social, idx) => {
+  const renderSocials = socialMedia.map((social, idx) => {
     return (
       <li key={idx}>
         <a className={social.className}>
@@ -32,14 +37,11 @@ const SingleBlogDetails = ({ curBlog }) => {
               <div>
                 {/* Blog Image */}
                 <div className="post-thumb">
-                  <img src={curBlog.imgUrl} alt={curBlog.imgAlt} />
+                  <img src={selectedBlog.imgUrl} alt={selectedBlog.imgAlt} />
                 </div>
                 {/* Blog Content */}
                 <div className="post-content">
-                  <h3>{curBlog.title}</h3>
-                  <div className="meta-post">
-                    <ul className="lab-ul">{renderMetaData}</ul>
-                  </div>
+                  <h3>{selectedBlog.title}</h3>
                   <p>
                     Serenity hasir taken poseson mying entre soung these sweet
                     morngs sprng whch enoywith whole heart create am alones and

@@ -1,9 +1,17 @@
-import React from "react";
-import { popularTagsData } from "../utilis/shopData";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchPopularTags } from "../redux/slices/postsTagsSlice";
 
 const Tags = () => {
+  const {tags} = useSelector((state) => state.postsTags);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchPopularTags());
+  }, []);
+
   // Map of all tags and render it
-  const renderTags = popularTagsData.map((tag, idx) => {
+  const renderTags = tags.map((tag, idx) => {
     return (
       <li key={idx}>
         <a href={tag.link}>{tag.text}</a>

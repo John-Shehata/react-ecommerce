@@ -1,10 +1,18 @@
-import React from "react";
-import {blogsData} from "/src/utilis/blogData";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchBlogs } from "../redux/slices/blogSlice";
 import { Link } from "react-router-dom";
 
 const BlogsCards = () => {
+  const { blogs } = useSelector((state) => state.blogs);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchBlogs());
+  }, []);
+
   // Map of all blogs and render them
-  const renderBlogs = blogsData.map((blog) => {
+  const renderBlogs = blogs.map((blog) => {
     return (
       <div key={blog.id} className="col mb-4">
         <div className="post-item">
