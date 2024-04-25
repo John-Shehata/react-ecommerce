@@ -1,10 +1,18 @@
-import React from "react";
-import { popbularPostsData } from "../utilis/shopData";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchPopularPosts } from "../redux/slices/postsTagsSlice";
 import { Link } from "react-router-dom";
 
 const PopularPosts = () => {
+  const {posts} = useSelector((state) => state.postsTags);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchPopularPosts());
+  }, []);
+
   // Map of all posts and render it
-  const renderPosts = popbularPostsData.map((post) => {
+  const renderPosts = posts.map((post) => {
     return (
       <li key={post.id} className="d-flex justify-content-between">
         <div className="post-thumb">

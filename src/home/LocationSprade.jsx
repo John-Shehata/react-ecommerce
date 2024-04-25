@@ -1,10 +1,17 @@
-import React from "react";
-import { locationSpradeData } from "../utilis/homeData.js";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { fetchLocations } from "../redux/slices/locationsSlice";
 
 const LocationSprade = () => {
+  const locationsSprade = useSelector((state) => state.locations);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchLocations());
+  }, []);
+
   // Map of Locations Data and render it
-  const renderLocationsData = locationSpradeData.map((location, idx) => {
+  const renderLocationsData = locationsSprade.map((location, idx) => {
     return (
       <div className="client-list" key={idx}>
         <Link to="/sign-up" className="client-content">

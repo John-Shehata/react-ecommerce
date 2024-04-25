@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CountUp from "react-countup";
-import { aboutUsData } from "../utilis/homeData";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-
-const subTitle = "";
-const title = "";
-const desc = "";
-const btnText = "";
+import { fetchAboutUs } from "../redux/slices/aboutUsSlice";
 
 const AboutUs = () => {
+  const aboutUs = useSelector((state) => state.aboutUs);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchAboutUs());
+  }, []);
+
   // Mapping of Icons data and render it
-  const renderIconsData = aboutUsData.map((icon, idx) => {
+  const renderIconsData = aboutUs.map((icon, idx) => {
     return (
       <div className="count-item" key={idx}>
         <div className="count-inner">

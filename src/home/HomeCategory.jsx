@@ -1,10 +1,19 @@
-import React from "react";
-import { homeCategoryData} from "../utilis/homeData";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { fetchHomeCategories } from "../redux/slices/homeCateogrySlice";
 
 const HomeCategory = () => {
+  const categories = useSelector((state) => state.categories);
+  const dispatch = useDispatch();
+
+  useEffect(()=>{
+    dispatch(fetchHomeCategories())
+  },[])
+  
+
   // Mapping of cards and render it
-  const renderCards = homeCategoryData.map((card, idx) => {
+  const renderCards = categories.map((card, idx) => {
     return (
       <div className="col" key={idx}>
         <Link to="/shop" className="category-item">
@@ -18,7 +27,7 @@ const HomeCategory = () => {
               <div className="cate-icon">
                 <i className={card.iconName}></i>
               </div>
-                <h6>{card.title}</h6>
+              <h6>{card.title}</h6>
             </div>
           </div>
         </Link>

@@ -1,12 +1,21 @@
-import React, { useState } from "react";
-import { categoryShowCaseData } from "../utilis/homeData";
+import React, { useEffect, useState } from "react";
 import Rating from "../components/Rating";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  fetchCategoryCases,
+  fetchSingleCategory,
+} from "../redux/slices/categoryShowCaseSlice";
 
 const CategoryShowCase = () => {
-  const [items, setItems] = useState(categoryShowCaseData);
+  const { selected } = useSelector((state) => state.categoryCases);
+  const dispatch = useDispatch();
 
-  const renderCategories = items.map((item, idx) => {
+  useEffect(() => {
+    dispatch(fetchCategoryCases());
+  }, []);
+
+  const renderCategories = selected.map((item, idx) => {
     return (
       <div className="col" key={idx}>
         <div className="course-item style-4">
@@ -25,7 +34,7 @@ const CategoryShowCase = () => {
             </div>
             {/* Course Content */}
             <div className="course-content">
-              <Link to={`/shop/${item.id}`}>
+              <Link to="/shop">
                 <h5>{item.title}</h5>
               </Link>
               <div className="course-footer">
@@ -42,17 +51,6 @@ const CategoryShowCase = () => {
       </div>
     );
   });
-
-  // Filter categories
-  const filterItems = (name) => {
-    const filterd = categoryShowCaseData.filter((item) => {
-      return item.cate === name;
-    });
-    setItems(filterd);
-    if (name === "All") {
-      setItems(categoryShowCaseData);
-    }
-  };
 
   return (
     <div className="course-section style-3 padding-tb">
@@ -77,11 +75,19 @@ const CategoryShowCase = () => {
           <h2 className="title">Our Products</h2>
           <div className="course-filter-group">
             <ul className="lab-ul">
-              <li onClick={() => filterItems("All")}>All</li>
-              <li onClick={() => filterItems("Shoes")}>Shoes</li>
-              <li onClick={() => filterItems("Bags")}>Bags</li>
-              <li onClick={() => filterItems("Phones")}>Phones</li>
-              <li onClick={() => filterItems("Beauty")}>Beauty</li>
+              <li onClick={() => dispatch(fetchCategoryCases())}>All</li>
+              <li onClick={() => dispatch(fetchSingleCategory("Shoes"))}>
+                Shoes
+              </li>
+              <li onClick={() => dispatch(fetchSingleCategory("Bags"))}>
+                Bags
+              </li>
+              <li onClick={() => dispatch(fetchSingleCategory("Phones"))}>
+                Phones
+              </li>
+              <li onClick={() => dispatch(fetchSingleCategory("Beauty"))}>
+                Beauty
+              </li>
             </ul>
           </div>
         </div>

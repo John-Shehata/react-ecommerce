@@ -1,5 +1,6 @@
-import React, { useContext, useState } from "react";
-import { socialList } from "../utilis/loginData";
+import React, { useContext, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchSocialMedia } from "../redux/slices/socialMediaSlice";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthProvider";
 
@@ -8,8 +9,15 @@ const Signup = () => {
   const { createNewAccount, signUpWithGmail } = useContext(AuthContext);
   const navigate = useNavigate();
 
+  const socialMedia = useSelector((state) => state.socialMedia);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchSocialMedia());
+  }, []);
+
   // Map of all socials and render them
-  const renderSocials = socialList.map((social, idx) => {
+  const renderSocials = socialMedia.map((social, idx) => {
     return (
       <li key={idx}>
         <a href={social.siteLink} className={social.className}>
