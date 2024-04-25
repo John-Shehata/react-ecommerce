@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/images/logo/logo.png";
+import logo from "/images/logo/logo.png";
 
 const NavItems = () => {
   const [menuToggle, setMenuToggle] = useState(false);

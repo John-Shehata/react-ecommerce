@@ -36,6 +36,9 @@ export const blogSlice = createSlice({
     bulider.addCase(fetchSelectedBlog.fulfilled, (state, action) => {
       state.selectedBlog = action.payload;
     });
+    bulider.addCase(fetchSelectedBlog.rejected, (state, action) => {
+      console.log(action.payload) 
+    });
   },
 });
 

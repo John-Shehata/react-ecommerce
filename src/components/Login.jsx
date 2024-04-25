@@ -127,7 +127,7 @@ const Login = () => {
                   <button className="github fs-5" onClick={handleRegister}>
                     <img
                       className="google"
-                      src="/src/assets/images/google-icon.png"
+                      src="/images/google-icon.png"
                       width={80}
                     ></img>
                   </button>

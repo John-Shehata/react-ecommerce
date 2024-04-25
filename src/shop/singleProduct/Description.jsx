@@ -14,7 +14,7 @@ const Description = () => {
       </p>
       <div className="post-item">
         <div className="post-thumb">
-          <img src="/src/assets/images/shop/01.jpg"></img>
+          <img src="/public/images/shop/01.jpg"></img>
         </div>
         <div className="post-content">
           <ul className="lab-ul">

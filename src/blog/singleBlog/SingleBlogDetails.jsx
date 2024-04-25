@@ -78,7 +78,7 @@ const SingleBlogDetails = () => {
                     present moment and yet feel that never was greater artst
                   </p>
                   <img
-                    src="/src/assets/images/blog/single/01.jpg"
+                    src="/images/blog/single/01.jpg"
                     alt="single blog image"
                   />
                   <p>

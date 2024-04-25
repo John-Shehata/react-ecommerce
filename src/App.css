@@ -52,14 +52,23 @@ h2 span {
   justify-content: center;
 }
 .rating {
-  height: 45px; 
+  height: 45px;
   display: flex;
   align-items: center;
 }
-.google{
+.google {
   max-width: 20px;
 }
 .github {
   background-color: rgb(159, 243, 197);
   /* border: 1px solid #6c6a6a; */
+}
+.banner {
+  background-image: url("/images/bg-img/06.jpg");
+  background-size: cover;
+}
+.register {
+  background-image: url("/images/bg-img/07.jpg");
+  background-position: center;
+  background-size: cover;
 }

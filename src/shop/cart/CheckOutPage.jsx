@@ -43,7 +43,7 @@ const CheckOutPage = () => {
                       href="#visa"
                     >
                       <img
-                        src="/src/assets/images/visa-and-mastercard-logo-26.png"
+                        src="/public/images/visa-and-mastercard-logo-26.png"
                         alt="visa image"
                         width={100}
                       ></img>
@@ -58,7 +58,7 @@ const CheckOutPage = () => {
                       href="#paypal"
                     >
                       <img
-                        src="/src/assets/images/paypal.png"
+                        src="/public/images/paypal.png"
                         alt="paypal image"
                         width={90}
                       ></img>
