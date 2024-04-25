@@ -57,13 +57,13 @@ const CategoryShowCase = () => {
       {/* Shapes */}
       <div className="course-shape one">
         <img
-          src="../src/assets/images/shape-img/icon/01.png"
+          src="/images/shape-img/icon/01.png"
           alt="shape one"
         ></img>
       </div>
       <div className="course-shape two">
         <img
-          src="../src/assets/images/shape-img/icon/02.png"
+          src="/images/shape-img/icon/02.png"
           alt="shape two"
         ></img>
       </div>

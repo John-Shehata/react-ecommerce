@@ -81,7 +81,7 @@
             .col {
                 .category-item {
                     .category-inner {
-                        background: url(../../assets/images/category/bg/01.jpg) no-repeat;
+                        background: url(images/category/bg/01.jpg) no-repeat;
                         background-size: cover !important;
                         .category-thumb {
                             margin-top: 60px;
@@ -97,49 +97,49 @@
                 &:nth-of-type(8n + 2) {
                     .category-item {
                         .category-inner {
-                            background: url(../../assets/images/category/bg/02.jpg) no-repeat;
+                            background: url(images/category/bg/02.jpg) no-repeat;
                         }
                     }
                 }
                 &:nth-of-type(8n + 3) {
                     .category-item {
                         .category-inner {
-                            background: url(../../assets/images/category/bg/03.jpg) no-repeat;
+                            background: url(images/category/bg/03.jpg) no-repeat;
                         }
                     }
                 }
                 &:nth-of-type(8n + 4) {
                     .category-item {
                         .category-inner {
-                            background: url(../../assets/images/category/bg/04.jpg) no-repeat;
+                            background: url(images/category/bg/04.jpg) no-repeat;
                         }
                     }
                 }
                 &:nth-of-type(8n + 5) {
                     .category-item {
                         .category-inner {
-                            background: url(../../assets/images/category/bg/05.jpg) no-repeat;
+                            background: url(images/category/bg/05.jpg) no-repeat;
                         }
                     }
                 }
                 &:nth-of-type(8n + 6) {
                     .category-item {
                         .category-inner {
-                            background: url(../../assets/images/category/bg/06.jpg) no-repeat;
+                            background: url(images/category/bg/06.jpg) no-repeat;
                         }
                     }
                 }
                 &:nth-of-type(8n + 7) {
                     .category-item {
                         .category-inner {
-                            background: url(../../assets/images/category/bg/07.jpg) no-repeat;
+                            background: url(images/category/bg/07.jpg) no-repeat;
                         }
                     }
                 }
                 &:nth-of-type(8n + 8) {
                     .category-item {
                         .category-inner {
-                            background: url(../../assets/images/category/bg/08.jpg) no-repeat;
+                            background: url(images/category/bg/08.jpg) no-repeat;
                         }
                     }
                 }
@@ -356,7 +356,7 @@
         }
     }
     &.style-3 {
-        background: url(../../assets/images/shape-img/01.jpg) no-repeat;
+        background: url(images/shape-img/01.jpg) no-repeat;
         background-position: center;
         background-size:  cover;
         @extend %rel;
@@ -510,7 +510,7 @@
 
 // video-section
 .video-section {
-    background: url(../../assets/images/bg-img/10.jpg) no-repeat;
+    background: url(images/bg-img/10.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     @include breakpoint(xl) {
@@ -785,7 +785,7 @@
 
 // contact-info-section
 .contact-info-section {
-    background: url(../../assets/images/bg-img/11.jpg) no-repeat;
+    background: url(images/bg-img/11.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     .section-header {
@@ -887,7 +887,7 @@
 
 // offer-section
 .offer-section {
-    background: url(../../assets/images/bg-img/12.jpg) no-repeat;
+    background: url(images/bg-img/12.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     @include breakpoint(xxl) {
@@ -1361,7 +1361,7 @@
         left: 0;
         @extend %w-100;
         @extend %h-100;
-        background: url(../../assets/images/shape-img/08.png) no-repeat;
+        background: url(images/shape-img/08.png) no-repeat;
         background-position: center;
         background-size:  115% 30%;
     }
@@ -1520,7 +1520,7 @@
         left: 0;
         @extend %w-100;
         @extend %h-100;
-        background: url(../../assets/images/shape-img/06.png) no-repeat;
+        background: url(images/shape-img/06.png) no-repeat;
         background-position: center;
         background-size: cover;
     }
@@ -1653,7 +1653,7 @@
         left: 0;
         @extend %w-100;
         @extend %h-100;
-        background: url(../../assets/images/shape-img/07.png) no-repeat;
+        background: url(images/shape-img/07.png) no-repeat;
         background-position: center;
         background-size: cover;
     }
@@ -1812,7 +1812,7 @@
 
 // clients-section
 .clients-section {
-    background: url(../../assets/images/bg-img/05.jpg) no-repeat;
+    background: url(images/bg-img/05.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     &.style-2 {
@@ -1831,7 +1831,7 @@
         }
         .section-wrapper {
             height: 400px;
-            background: url(../../assets/images/clients/bg.png) no-repeat;
+            background: url(images/clients/bg.png) no-repeat;
             background-position: center;
             background-size: 75% 100%;
             @include breakpoint(max-sm) {
@@ -2088,7 +2088,7 @@
 
 // register-section
 .register-section {
-    background: url(../../assets/images/bg-img/07.jpg) no-repeat;
+    background: url(/images/bg-img/07.jpg) no-repeat;
     background-position: center;
     background-size:  cover;
     .section-header {

@@ -40,31 +40,33 @@ const Banner = () => {
   });
 
   return (
-    <div className="banner-section style-4">
-      <div className="container">
-        <div className="banner-content">
-          <h2>
-            Search Your One From <span>Thousand</span> Of Products
-          </h2>
+    <div className="banner">
+      <div className="banner-section style-4">
+        <div className="container">
+          <div className="banner-content">
+            <h2>
+              Search Your One From <span>Thousand</span> Of Products
+            </h2>
 
-          {/* Search Input and Filtering */}
-          <form>
-            <SelectedCategory />
-            <input
-              type="text"
-              name="search"
-              id="search"
-              value={searchInput}
-              placeholder="Search your product"
-              onChange={searchHandler}
-            ></input>
-            <button type="submit">
-              <i className="icofont-ui-search"></i>
-            </button>
-          </form>
-          <p>We have the largest collection of products</p>
+            {/* Search Input and Filtering */}
+            <form>
+              <SelectedCategory />
+              <input
+                type="text"
+                name="search"
+                id="search"
+                value={searchInput}
+                placeholder="Search your product"
+                onChange={searchHandler}
+              ></input>
+              <button type="submit">
+                <i className="icofont-ui-search"></i>
+              </button>
+            </form>
+            <p>We have the largest collection of products</p>
 
-          <ul className="lab-ul">{renderFilterdData}</ul>
+            <ul className="lab-ul">{renderFilterdData}</ul>
+          </div>
         </div>
       </div>
     </div>

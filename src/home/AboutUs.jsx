@@ -59,7 +59,7 @@ const AboutUs = () => {
             {/* Middle Side */}
             <div className="col">
               <div className="instructor-thumb">
-                <img src="../src/assets/images/instructor/01.png"></img>
+                <img src="/images/instructor/01.png"></img>
               </div>
             </div>
           </div>

@@ -1,8 +1,11 @@
 import React from "react";
+import "../App.css"
 
 const Register = () => {
   return (
-    <section className="register-section padding-tb pb-0">
+
+    <section className="register padding-tb pb-0">
+    <section className="register-section">
       <div className="container">
         <div className="row row-cols-lg-2 row-cols-1 align-items-center">
           {/* Left Side */}
@@ -54,6 +57,7 @@ const Register = () => {
           </div>
         </div>
       </div>
+    </section>
     </section>
   );
 };

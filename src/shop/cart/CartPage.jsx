@@ -85,7 +85,7 @@ const CartPage = () => {
         {/* Delet Icon */}
         <td className="cat-edit">
           <a href="#" onClick={() => removeItem(item)}>
-            <img src="/src/assets/images/shop/del.png" alt="delete icon" />
+            <img src="/public/images/shop/del.png" alt="delete icon" />
           </a>
         </td>
       </tr>

@@ -37,13 +37,13 @@ const About = () => {
               <div className="about-left">
                 <div className="about-thumb">
                   <img
-                    src="/src/assets/images/about/01.jpg"
+                    src="/images/about/01.jpg"
                     alt="about image"
                   />
                 </div>
                 <div className="abs-thumb">
                   <img
-                    src="/src/assets/images/about/02.jpg"
+                    src="/images/about/02.jpg"
                     alt="about image"
                   />
                 </div>
