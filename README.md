@@ -1,7 +1,7 @@
 # React + Vite
 
 - Summary: E-commerce website for displaying and purchasing products from various categories such as shoes, bags, phones, and cosmetics, and provides the ability to log in using Firebase.
--	Technologies are used: React.js | JSX | Bootstrap | Sass| Redux Toolkit | JSON-server | Axios | Fire Base | swiper | popper.js | countup.js
+-	Technologies are used: React.js | JSX | Bootstrap | Sass| Redux Toolkit | JSON-server | Axios | Fire Base | swiper | popper.js | countup.js 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
